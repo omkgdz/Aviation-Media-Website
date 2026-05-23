@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# GitHub Repository Setup Script for AnDing Spotting
+
+echo "========================================="
+echo "AnDing Spotting - GitHub Setup Guide"
+echo "========================================="
+echo ""
+echo "Please follow these steps to create your GitHub repository:"
+echo ""
+echo "STEP 1: Create a new repository on GitHub"
+echo "1. Go to: https://github.com/new"
+echo "2. Repository name: anding-spotting"
+echo "3. Description: Professional Aviation Photography & Media Website"
+echo "4. Select 'Public' or 'Private' as preferred"
+echo "5. DO NOT initialize with README, .gitignore, or license"
+echo "6. Click 'Create repository'"
+echo ""
+echo "STEP 2: After creating the repository, run these commands:"
+echo ""
+echo "   git remote add origin https://github.com/YOUR_USERNAME/anding-spotting.git"
+echo "   git branch -M main"
+echo "   git push -u origin main"
+echo ""
+echo "========================================="
+echo "Replace 'YOUR_USERNAME' with your GitHub username"
+echo "========================================="
