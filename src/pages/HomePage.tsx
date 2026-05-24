@@ -9,26 +9,6 @@ const HomePage = () => {
     <div>
       <HeroSection />
 
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-4xl mb-4">
-              <span className="text-white">Meet the </span>
-              <span className="gradient-text">Team</span>
-            </h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              Our talented group of aviation photographers and enthusiasts
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {members.map((member) => (
-              <MemberCard key={member.id} member={member} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-4 bg-background/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -44,6 +24,26 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reports.slice(0, 3).map((report) => (
               <ReportCard key={report.id} report={report} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-4xl mb-4">
+              <span className="text-white">Meet the </span>
+              <span className="gradient-text">Team</span>
+            </h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              Our talented group of aviation photographers and enthusiasts
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {members.map((member) => (
+              <MemberCard key={member.id} member={member} />
             ))}
           </div>
         </div>
