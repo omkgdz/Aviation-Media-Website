@@ -1,54 +1,61 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-
-const heroImages = [
-  {
-    url: '/images/hero/hero1.jpg',
-    title: 'Commercial Aviation'
-  },
-  {
-    url: '/images/hero/hero2.jpg',
-    title: 'Military Aircraft'
-  },
-  {
-    url: '/images/hero/hero3.jpg',
-    title: 'Airshow Action'
-  }
-]
+import { photos } from '../data/photos'
 
 const HeroSection = () => {
+  const [shuffledPhotos, setShuffledPhotos] = useState<typeof photos>([])
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
+    const shuffleArray = (array: typeof photos) => {
+      const newArray = [...array]
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[newArray[i], newArray[j]] = [newArray[j], newArray[i]]
+      }
+      return newArray
+    }
+    setShuffledPhotos(shuffleArray(photos))
+  }, [])
+
+  useEffect(() => {
+    if (shuffledPhotos.length === 0) return
+    
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroImages.length)
+      setCurrentIndex((prev) => (prev + 1) % shuffledPhotos.length)
     }, 8000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [shuffledPhotos])
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % heroImages.length)
+    if (shuffledPhotos.length > 0) {
+      setCurrentIndex((prev) => (prev + 1) % shuffledPhotos.length)
+    }
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+    if (shuffledPhotos.length > 0) {
+      setCurrentIndex((prev) => (prev - 1 + shuffledPhotos.length) % shuffledPhotos.length)
+    }
   }
+
+  if (shuffledPhotos.length === 0) return null
 
   return (
     <section className="relative h-screen">
       <div className="absolute inset-0 overflow-hidden">
-        {heroImages.map((image, index) => (
+        {shuffledPhotos.map((photo, index) => (
           <div
-            key={index}
+            key={photo.id}
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary"></div>
             <img
-              src={image.url}
-              alt={image.title}
+              src={photo.url}
+              alt={photo.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -85,7 +92,7 @@ const HeroSection = () => {
       </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
-        {heroImages.map((_, index) => (
+        {shuffledPhotos.slice(0, 10).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
