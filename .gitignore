@@ -38,3 +38,9 @@ node-v20.10.0-darwin-x64/
 # TypeScript build info
 *.tsbuildinfo
 vite.config.d.ts
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
