@@ -107,44 +107,44 @@ LIMA 2025 continues to solidify its reputation as a must-attend event for aviati
             airport: 'WMKL'
           },
       {
-        id: 'langkawi-2025-6',
-        url: '/images/reports/langkawi2025/431852014eb4ebc4e02c617ce87e6d13.jpg',
-        thumbnail: '/images/reports/langkawi2025/431852014eb4ebc4e02c617ce87e6d13.jpg',
-        title: 'Air Display',
-        aircraft: 'Multiple Aircraft',
-        registration: 'N/A',
-        airline: 'Various',
-        category: 'military',
-        date: '2025-05-20',
-        location: 'Langkawi International Airport',
-        airport: 'WMKL'
-      },
-      {
-        id: 'langkawi-2025-7',
-        url: '/images/reports/langkawi2025/542c9e4a04aed64ec02e2ef172ef8055.jpg',
-        thumbnail: '/images/reports/langkawi2025/542c9e4a04aed64ec02e2ef172ef8055.jpg',
-        title: 'Aerial Display',
-        aircraft: 'Aircraft Display',
-        registration: 'N/A',
-        airline: 'Various',
-        category: 'military',
-        date: '2025-05-20',
-        location: 'Langkawi International Airport',
-        airport: 'WMKL'
-      },
-      {
-        id: 'langkawi-2025-8',
-        url: '/images/reports/langkawi2025/86725cdc0e9fa00f1451d38630b1c1e4.jpg',
-        thumbnail: '/images/reports/langkawi2025/86725cdc0e9fa00f1451d38630b1c1e4.jpg',
-        title: 'Static Display',
-        aircraft: 'Various Aircraft',
-        registration: 'N/A',
-        airline: 'Various',
-        category: 'military',
-        date: '2025-05-20',
-        location: 'Langkawi International Airport',
-        airport: 'WMKL'
-      }
+            id: 'langkawi-2025-6',
+            url: '/images/reports/langkawi2025/431852014eb4ebc4e02c617ce87e6d13.jpg',
+            thumbnail: '/images/reports/langkawi2025/431852014eb4ebc4e02c617ce87e6d13.jpg',
+            title: 'Russian Knights Su-35',
+            aircraft: 'Sukhoi Su-35',
+            registration: 'RF-95906',
+            airline: 'Russian Air Force',
+            category: 'military',
+            date: '2025-05-20',
+            location: 'Langkawi International Airport',
+            airport: 'WMKL'
+          },
+          {
+            id: 'langkawi-2025-7',
+            url: '/images/reports/langkawi2025/542c9e4a04aed64ec02e2ef172ef8055.jpg',
+            thumbnail: '/images/reports/langkawi2025/542c9e4a04aed64ec02e2ef172ef8055.jpg',
+            title: 'Singapore Air Force F-50',
+            aircraft: 'Fokker 50 MPA',
+            registration: '712',
+            airline: 'Republic of Singapore Air Force',
+            category: 'military',
+            date: '2025-05-20',
+            location: 'Langkawi International Airport',
+            airport: 'WMKL'
+          },
+          {
+            id: 'langkawi-2025-8',
+            url: '/images/reports/langkawi2025/86725cdc0e9fa00f1451d38630b1c1e4.jpg',
+            thumbnail: '/images/reports/langkawi2025/86725cdc0e9fa00f1451d38630b1c1e4.jpg',
+            title: 'US Navy F/A-18 Hornet',
+            aircraft: 'McDonnell Douglas F/A-18 Hornet',
+            registration: '168867',
+            airline: 'United States Navy',
+            category: 'military',
+            date: '2025-05-20',
+            location: 'Langkawi International Airport',
+            airport: 'WMKL'
+          }
     ]
   },
   {
