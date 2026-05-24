@@ -56,7 +56,7 @@ const HeroSection = () => {
             <img
               src={photo.url}
               alt={photo.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         ))}
