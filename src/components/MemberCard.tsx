@@ -9,9 +9,12 @@ const MemberCard = ({ member }: MemberCardProps) => {
   return (
     <div className="glass-card rounded-lg p-6 group hover:shadow-xl transition-all duration-300">
       <div className="mb-4">
-        <h3 className="font-heading font-bold text-xl text-white mb-2">
+        <h3 className="font-heading font-bold text-xl text-white mb-1">
           {member.name}
         </h3>
+        <p className="text-muted text-sm mb-2">
+          ({member.nickname})
+        </p>
         <p className="text-secondary text-sm font-medium">
           {member.role}
         </p>
