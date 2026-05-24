@@ -12,7 +12,7 @@ const PhotoCard = ({ photo, onClick }: PhotoCardProps) => {
       onClick={onClick}
       className="group cursor-pointer overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative aspect-[3/2] overflow-hidden">
         <img
           src={photo.thumbnail}
           alt={photo.title}

@@ -92,7 +92,7 @@ const ReportDetailPage = () => {
                 {report.gallery.map((photo) => (
                   <div
                     key={photo.id}
-                    className="aspect-video rounded-lg overflow-hidden glass-card"
+                    className="aspect-[3/2] rounded-lg overflow-hidden glass-card"
                   >
                     <img
                       src={photo.thumbnail}
