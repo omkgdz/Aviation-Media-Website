@@ -15,6 +15,174 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'riat-2024',
+    title: 'Royal International Air Tattoo 2024',
+    subtitle: 'RIAT 2024 - The World\'s Largest Military Airshow',
+    coverImage: '/images/reports/riat24/A7-MAB.jpg',
+    date: '2024-07-19',
+    location: 'Fairford, UK',
+    airport: 'EGVA',
+    authors: ['Runfeng Jiang', 'Boyuan Zhang'],
+    content: `The Royal International Air Tattoo (RIAT) 2024 at RAF Fairford brought together the world's finest military aviation in one spectacular event. Our team was on hand to capture the best of what the world's largest military airshow has to offer.
+
+RAF Fairford, located in the Cotswolds, provides the perfect venue for this massive gathering of aviation enthusiasts from around the globe. With over 300 aircraft from 40+ countries on display and in the air, RIAT 2024 was truly a showcase of international cooperation and aviation excellence.
+
+The flying display was nothing short of spectacular, with demonstration teams and solo displays from air forces across Europe, the Middle East, and beyond. From fast jets to large transports and helicopters, every type of military aircraft was represented.
+
+Special highlights from RIAT 2024 included:
+- The impressive display by the Qatar Emiri Air Force F-15QA
+- The stunning performance of the Royal Moroccan Air Force F-16C/D
+- The RAF's own Typhoon display with special markings
+- International participants from across Europe and beyond
+
+RIAT 2024 continues its tradition as the world's premier military airshow, bringing together air forces, industry, and enthusiasts in celebration of flight.`,
+    gallery: [
+      {
+        id: 'riat-2024-1',
+        url: '/images/reports/riat24/A7-MAB.jpg',
+        thumbnail: '/images/reports/riat24/A7-MAB.jpg',
+        title: 'Qatar Emiri Air Force F-15QA',
+        aircraft: 'Boeing F-15QA Eagle',
+        registration: 'QA538',
+        airline: 'Qatar Emiri Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-2',
+        url: '/images/reports/riat24/08-8018MoroccoF16.jpg',
+        thumbnail: '/images/reports/riat24/08-8018MoroccoF16.jpg',
+        title: 'Royal Moroccan Air Force F-16',
+        aircraft: 'Lockheed Martin F-16C/D Fighting Falcon',
+        registration: '08-8018',
+        airline: 'Royal Moroccan Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-3',
+        url: '/images/reports/riat24/31+06.jpg',
+        thumbnail: '/images/reports/riat24/31+06.jpg',
+        title: 'German Air Force Aircraft',
+        aircraft: 'Various German Air Force',
+        registration: '31+06',
+        airline: 'German Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-4',
+        url: '/images/reports/riat24/64-148141RC135USAF.jpg',
+        thumbnail: '/images/reports/riat24/64-148141RC135USAF.jpg',
+        title: 'USAF RC-135 Rivet Joint',
+        aircraft: 'Boeing RC-135 Rivet Joint',
+        registration: '64-14814',
+        airline: 'United States Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-5',
+        url: '/images/reports/riat24/86-0031.jpg',
+        thumbnail: '/images/reports/riat24/86-0031.jpg',
+        title: 'USAF B-52 Stratofortress',
+        aircraft: 'Boeing B-52 Stratofortress',
+        registration: '86-0031',
+        airline: 'United States Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-6',
+        url: '/images/reports/riat24/01522.jpg',
+        thumbnail: '/images/reports/riat24/01522.jpg',
+        title: 'Military Aircraft Display',
+        aircraft: 'Various Military Aircraft',
+        registration: '01-522',
+        airline: 'Various',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-7',
+        url: '/images/reports/riat24/LX-N90456.jpg',
+        thumbnail: '/images/reports/riat24/LX-N90456.jpg',
+        title: 'Luxembourg Military Transport',
+        aircraft: 'Airbus A400M Atlas',
+        registration: 'LX-N90456',
+        airline: 'Luxembourg Armed Forces',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-8',
+        url: '/images/reports/riat24/QA538Qatar F15.jpg',
+        thumbnail: '/images/reports/riat24/QA538Qatar F15.jpg',
+        title: 'Qatar F-15QA at RIAT 2024',
+        aircraft: 'Boeing F-15QA Eagle',
+        registration: 'QA538',
+        airline: 'Qatar Emiri Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-9',
+        url: '/images/reports/riat24/ZG913.jpg',
+        thumbnail: '/images/reports/riat24/ZG913.jpg',
+        title: 'RAF Aircraft',
+        aircraft: 'RAF Military Aircraft',
+        registration: 'ZG913',
+        airline: 'Royal Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-10',
+        url: '/images/reports/riat24/ZM712.jpg',
+        thumbnail: '/images/reports/riat24/ZM712.jpg',
+        title: 'RAF P-8 Poseidon',
+        aircraft: 'Boeing P-8 Poseidon',
+        registration: 'ZM712',
+        airline: 'Royal Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      },
+      {
+        id: 'riat-2024-11',
+        url: '/images/reports/riat24/ZZ666.jpg',
+        thumbnail: '/images/reports/riat24/ZZ666.jpg',
+        title: 'RAF Chinook',
+        aircraft: 'Boeing Chinook',
+        registration: 'ZZ666',
+        airline: 'Royal Air Force',
+        category: 'military',
+        date: '2024-07-19',
+        location: 'RAF Fairford',
+        airport: 'EGVA'
+      }
+    ]
+  },
+  {
     id: 'langkawi-2025',
     title: 'Langkawi International Maritime and Aerospace Exhibition 2025',
     subtitle: 'LIMA 2025 - Southeast Asia\'s Premier Defence and Aerospace Showcase',
