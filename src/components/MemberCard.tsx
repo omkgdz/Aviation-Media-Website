@@ -1,5 +1,5 @@
 import { Member } from '../data/members'
-import { Camera, Plane } from 'lucide-react'
+import { Camera, Mail } from 'lucide-react'
 
 interface MemberCardProps {
   member: Member
@@ -29,15 +29,13 @@ const MemberCard = ({ member }: MemberCardProps) => {
             <span className="text-white text-sm">Instagram</span>
           </a>
         )}
-        {member.jetphotos && (
+        {member.email && (
           <a
-            href={member.jetphotos}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-full hover:bg-blue-500/80 transition-colors"
+            href={`mailto:${member.email}`}
+            className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-full hover:bg-green-500/80 transition-colors"
           >
-            <Plane className="w-4 h-4 text-white" />
-            <span className="text-white text-sm">JetPhotos</span>
+            <Mail className="w-4 h-4 text-white" />
+            <span className="text-white text-sm">Email</span>
           </a>
         )}
       </div>

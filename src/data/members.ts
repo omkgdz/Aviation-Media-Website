@@ -5,7 +5,7 @@ export interface Member {
   avatar: string
   bio: string
   instagram?: string
-  jetphotos?: string
+  email?: string
 }
 
 export const members: Member[] = [
@@ -16,7 +16,7 @@ export const members: Member[] = [
     avatar: '/images/members/member1.jpg',
     bio: 'Aviation photographer with 8+ years experience, specializes in commercial aviation and airshows.',
     instagram: 'https://instagram.com/zhangwei_spotting',
-    jetphotos: 'https://jetphotos.com/photographer/zhangwei'
+    email: 'zhangwei@adplanespot.org'
   },
   {
     id: '2',
@@ -25,7 +25,7 @@ export const members: Member[] = [
     avatar: '/images/members/member2.jpg',
     bio: 'Focused on military aircraft photography, documented numerous exercises and airshows worldwide.',
     instagram: 'https://instagram.com/liming_aviation',
-    jetphotos: 'https://jetphotos.com/photographer/liming'
+    email: 'liming@adplanespot.org'
   },
   {
     id: '3',
@@ -34,7 +34,7 @@ export const members: Member[] = [
     avatar: '/images/members/member3.jpg',
     bio: 'Expert in night photography and airport operations, capturing stunning night departures and arrivals.',
     instagram: 'https://instagram.com/wangfang_night',
-    jetphotos: 'https://jetphotos.com/photographer/wangfang'
+    email: 'wangfang@adplanespot.org'
   },
   {
     id: '4',
@@ -43,7 +43,7 @@ export const members: Member[] = [
     avatar: '/images/members/member4.jpg',
     bio: 'Covers regional airports and general aviation, passionate about vintage aircraft.',
     instagram: 'https://instagram.com/chenjie_spots',
-    jetphotos: 'https://jetphotos.com/photographer/chenjie'
+    email: 'chenjie@adplanespot.org'
   },
   {
     id: '5',
@@ -52,7 +52,7 @@ export const members: Member[] = [
     avatar: '/images/members/member5.jpg',
     bio: 'Dedicated to helicopter photography, covering EMS, law enforcement, and corporate operations.',
     instagram: 'https://instagram.com/liuyang_heli',
-    jetphotos: 'https://jetphotos.com/photographer/liuyang'
+    email: 'liuyang@adplanespot.org'
   },
   {
     id: '6',
@@ -61,6 +61,6 @@ export const members: Member[] = [
     avatar: '/images/members/member6.jpg',
     bio: 'Maintains comprehensive spotting logs and database of aircraft registrations and movements.',
     instagram: 'https://instagram.com/zhaohong_spots',
-    jetphotos: 'https://jetphotos.com/photographer/zhaohong'
+    email: 'zhaohong@adplanespot.org'
   }
 ]
