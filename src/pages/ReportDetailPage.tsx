@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { reports } from '../data/reports'
-import { Calendar, MapPin, ArrowLeft } from 'lucide-react'
+import { Calendar, MapPin, ArrowLeft, User } from 'lucide-react'
 
 const ReportDetailPage = () => {
   const { id } = useParams()
@@ -63,6 +63,12 @@ const ReportDetailPage = () => {
             {report.airport && (
               <span className="font-mono text-secondary">
                 {report.airport}
+              </span>
+            )}
+            {report.authors && report.authors.length > 0 && (
+              <span className="flex items-center gap-2">
+                <User className="w-5 h-5" />
+                By {report.authors.join(' & ')}
               </span>
             )}
           </div>

@@ -10,6 +10,7 @@ export interface Report {
   airport?: string
   content: string
   gallery: Photo[]
+  authors?: string[]
 }
 
 export const reports: Report[] = [
@@ -21,6 +22,7 @@ export const reports: Report[] = [
     date: '2025-05-20',
     location: 'Langkawi, Malaysia',
     airport: 'WMKL',
+    authors: ['Runfeng Jiang', 'Boyuan Zhang'],
     content: `Langkawi International Maritime and Aerospace Exhibition (LIMA) 2025 once again delivered an extraordinary showcase of aviation excellence in the tropical paradise of Malaysia. Our team traveled to the scenic island of Langkawi to capture one of Southeast Asia's most prestigious aerospace and defense exhibitions.
 
 Held at the Langkawi International Airport, LIMA 2025 featured an impressive array of military and commercial aircraft from across the globe. The event brought together air forces and aerospace companies from over 40 countries, presenting the latest in aviation technology and defense capabilities.
