@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { reports } from '../data/reports'
 import { Calendar, MapPin, ArrowLeft, User } from 'lucide-react'
+import { getImageUrl } from '../config/imageConfig'
 
 const ReportDetailPage = () => {
   const { id } = useParams()
@@ -28,7 +29,7 @@ const ReportDetailPage = () => {
     <div className="pt-20">
       <div className="relative h-[60vh] overflow-hidden">
         <img
-          src={report.coverImage}
+          src={getImageUrl(report.coverImage)}
           alt={report.title}
           className="w-full h-full object-cover"
         />
@@ -95,7 +96,7 @@ const ReportDetailPage = () => {
                     className="aspect-[3/2] rounded-lg overflow-hidden glass-card"
                   >
                     <img
-                      src={photo.thumbnail}
+                      src={getImageUrl(photo.thumbnail)}
                       alt={photo.title}
                       className="w-full h-full object-cover"
                       loading="lazy"

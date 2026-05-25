@@ -1,86 +1,100 @@
 # 照片存储方案指南
 
-## 问题现状
-- 当前照片: 20张，203MB
-- GitHub: 只有5GB容量限制
-- 单张照片平均: 10MB+
+## 已完成的配置
+
+✅ **已配置 Cloudflare R2 存储**
+✅ **已更新所有组件使用新的图片路径**
+✅ **已创建上传脚本**
 
 ---
 
-## 推荐方案：Cloudflare R2（⭐ 最佳）
+## 当前配置
 
-### 优势
-- ✅ 与Cloudflare Pages完美集成
-- ✅ 免费: 10GB存储 + 1000万次/月请求
-- ✅ 全球CDN加速
-- ✅ 零传出费用
+### 生产环境
+- **R2 Bucket**: `andingspotting-photos`
+- **CDN URL**: `https://pub-0869994e37154e358387e8b8397f1273.r2.dev`
+- **存储容量**: 免费 10GB
+- **请求限额**: 1000万次/月
 
-### 设置步骤
+### 开发环境
+- 使用本地 `public/images/` 目录
 
-#### 1. 创建R2存储桶
-1. 登录 Cloudflare Dashboard
-2. 左侧菜单 → R2
-3. 点击 "Create bucket"
-4. 命名为 `andingspotting-photos` 或其他
-5. 选择就近的地理位置（e.g., Western North America）
+---
 
-#### 2. 配置公开访问（可选但推荐）
-1. 在Bucket页面 → "Settings" → "R2.dev subdomain"
-2. 启用 "Allow access"
-3. 记录下子域名：`<bucket-name>.<random>.r2.dev`
+## 上传照片到 R2
 
-#### 3. 上传照片
-方式A: 使用Cloudflare Dashboard（手动上传）
-- 在Bucket页面 → "Upload" → 拖拽或选择文件
+### 方法1: 使用脚本 (推荐)
 
-方式B: 使用Rclone（推荐大量上传）
 ```bash
-# 配置R2
-rclone config create r2 cloudflare \
-  access_key_id=<your-access-key> \
-  secret_access_key=<your-secret-key> \
-  endpoint=https://<account-id>.r2.cloudflarestorage.com
+# 设置环境变量
+export R2_ACCESS_KEY_ID=<your-access-key>
+export R2_SECRET_ACCESS_KEY=<your-secret-key>
+export R2_ACCOUNT_ID=<your-account-id>
 
-# 上传
-rclone sync public/images r2:<bucket-name>/
+# 运行上传脚本
+bash scripts/upload_to_r2.sh
 ```
 
-#### 4. 更新代码
-修改 `src/data/photos.ts` 和 `src/data/reports.ts`，把所有图片路径从：
-```typescript
-url: '/images/reports/riat24/A7-MAB.jpg'
-```
+### 方法2: 手动上传
 
-改为：
-```typescript
-url: 'https://<your-r2-domain>/reports/riat24/A7-MAB.jpg'
-```
-
-### 5. （可选）配置自定义域名
-在Bucket设置 → "Custom Domains"，添加：
-- `photos.adplanespot.org`
-- 自动配置SSL和CDN
+1. 登录 Cloudflare Dashboard
+2. 进入 R2 → `andingspotting-photos`
+3. 点击 "Upload" → 选择文件
 
 ---
 
-## 备选方案
+## 代码结构
 
-### 方案2: Cloudinary
-1. 注册 Cloudinary 免费账户（25GB）
-2. 上传照片
-3. 获取URL并更新代码
+### 配置文件
+`src/config/imageConfig.ts` - 统一管理图片基础URL
 
-### 方案3: AWS S3
-1. 创建S3存储桶
-2. 配置静态网站托管
-3. 配置CloudFront CDN（可选）
+```typescript
+export const IMAGE_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://pub-0869994e37154e358387e8b8397f1273.r2.dev'
+  : '/images'
+
+export const getImageUrl = (path: string): string => {
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path
+  }
+  return `${IMAGE_BASE_URL}${path}`
+}
+```
+
+### 已更新的组件
+- `src/components/HeroSection.tsx`
+- `src/components/PhotoCard.tsx`
+- `src/components/ReportCard.tsx`
+- `src/components/Lightbox.tsx`
+- `src/pages/ReportDetailPage.tsx`
 
 ---
 
-## 当前照片清单
-- **RIAT24**: 11张，约96MB
-- **Langkawi2025**: 9张，约107MB
+## 优势
 
-**总计**: 203MB
+✅ 与 Cloudflare Pages 完美集成  
+✅ 免费额度充足 (10GB + 1000万请求/月)  
+✅ 全球 CDN 加速  
+✅ 零传出费用  
+✅ GitHub 仓库体积大幅减小  
 
-建议先测试一下R2方案，体验更好！
+---
+
+## 迁移步骤总结
+
+1. ✅ 创建 Cloudflare R2 Bucket
+2. ✅ 配置公开访问域名
+3. ✅ 创建统一图片配置
+4. ✅ 更新所有组件使用 `getImageUrl()`
+5. ✅ 上传照片到 R2
+6. ✅ 删除本地大照片 (可选)
+
+---
+
+## 未来扩展
+
+如需添加新照片:
+1. 放在 `public/images/` 目录
+2. 更新 `src/data/photos.ts` 或 `src/data/reports.ts`
+3. 运行上传脚本同步到 R2
+4. 提交代码即可

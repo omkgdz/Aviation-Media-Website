@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { photos } from '../data/photos'
+import { getImageUrl } from '../config/imageConfig'
 
 const HeroSection = () => {
   const [shuffledPhotos, setShuffledPhotos] = useState<typeof photos>([])
@@ -54,7 +55,7 @@ const HeroSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary"></div>
             <img
-              src={photo.url}
+              src={getImageUrl(photo.url)}
               alt={photo.title}
               className="w-full h-full object-cover"
             />

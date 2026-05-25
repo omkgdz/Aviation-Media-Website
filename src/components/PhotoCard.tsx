@@ -1,5 +1,6 @@
 import { Photo } from '../data/photos'
 import { Plane, Calendar, MapPin } from 'lucide-react'
+import { getImageUrl } from '../config/imageConfig'
 
 interface PhotoCardProps {
   photo: Photo
@@ -14,7 +15,7 @@ const PhotoCard = ({ photo, onClick }: PhotoCardProps) => {
     >
       <div className="relative aspect-[3/2] overflow-hidden">
         <img
-          src={photo.thumbnail}
+          src={getImageUrl(photo.thumbnail)}
           alt={photo.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           loading="lazy"

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Photo } from '../data/photos'
+import { getImageUrl } from '../config/imageConfig'
 
 interface LightboxProps {
   photos: Photo[]
@@ -74,7 +75,7 @@ const Lightbox = ({ photos, currentIndex, isOpen, onClose, onNext, onPrev }: Lig
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={currentPhoto.url}
+          src={getImageUrl(currentPhoto.url)}
           alt={currentPhoto.title}
           className="max-w-full max-h-[80vh] object-contain"
         />

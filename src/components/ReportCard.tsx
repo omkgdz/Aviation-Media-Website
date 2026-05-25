@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Report } from '../data/reports'
 import { Calendar, MapPin } from 'lucide-react'
+import { getImageUrl } from '../config/imageConfig'
 
 interface ReportCardProps {
   report: Report
@@ -14,7 +15,7 @@ const ReportCard = ({ report }: ReportCardProps) => {
     >
       <div className="relative h-64 overflow-hidden">
         <img
-          src={report.coverImage}
+          src={getImageUrl(report.coverImage)}
           alt={report.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
