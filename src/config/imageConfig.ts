@@ -1,5 +1,5 @@
 export const IMAGE_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://c876c73ef02dc7b79e1ed16fcf79f790.r2.cloudflarestorage.com/anding-spotting'
+  ? 'https://anding-spotting.c876c73ef02dc7b79e1ed16fcf79f790.r2.dev'
   : '/images'
 
 export const getImageUrl = (path: string): string => {
