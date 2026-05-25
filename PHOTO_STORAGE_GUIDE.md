@@ -11,8 +11,8 @@
 ## 当前配置
 
 ### 生产环境
-- **R2 Bucket**: `andingspotting-photos`
-- **CDN URL**: `https://pub-0869994e37154e358387e8b8397f1273.r2.dev`
+- **R2 Bucket**: `anding-spotting`
+- **CDN URL**: `https://c876c73ef02dc7b79e1ed16fcf79f790.r2.cloudflarestorage.com/anding-spotting`
 - **存储容量**: 免费 10GB
 - **请求限额**: 1000万次/月
 
@@ -50,7 +50,7 @@ bash scripts/upload_to_r2.sh
 
 ```typescript
 export const IMAGE_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://pub-0869994e37154e358387e8b8397f1273.r2.dev'
+  ? 'https://c876c73ef02dc7b79e1ed16fcf79f790.r2.cloudflarestorage.com/anding-spotting'
   : '/images'
 
 export const getImageUrl = (path: string): string => {

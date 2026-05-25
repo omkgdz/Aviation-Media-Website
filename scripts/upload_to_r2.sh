@@ -11,7 +11,7 @@ if [ -z "$R2_ACCESS_KEY_ID" ] || [ -z "$R2_SECRET_ACCESS_KEY" ] || [ -z "$R2_ACC
   exit 1
 fi
 
-BUCKET_NAME="andingspotting-photos"
+BUCKET_NAME="anding-spotting"
 LOCAL_DIR="public/images"
 
 echo "Checking if rclone is installed..."
@@ -35,6 +35,6 @@ rclone sync "$LOCAL_DIR" r2:"$BUCKET_NAME"/ \
 
 echo ""
 echo "=== Upload Complete! ==="
-echo "Your photos are now hosted at: https://pub-0869994e37154e358387e8b8397f1273.r2.dev/"
+echo "Your photos are now hosted at: https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com/$BUCKET_NAME/"
 echo ""
 echo "Don't forget to update src/config/imageConfig.ts with the correct R2 URL"
