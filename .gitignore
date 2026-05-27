@@ -44,8 +44,3 @@ vite.config.d.ts
 .dev.vars*
 !.dev.vars.example
 !.env.example
-
-# Airshow files (images hosted on Cloudflare)
-Airshow and Open Days/
-MemberList.xlsx
-public/images/reports/zhuhai2024/

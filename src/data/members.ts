@@ -31,5 +31,13 @@ export const members: Member[] = [
     role: 'Aviation Photographer',
     instagram: 'https://instagram.com/jiangwolfe',
     email: 'gan111345@outlook.com'
+  },
+  {
+    id: '4',
+    name: 'Haoming Zhang',
+    nickname: 'Ryan',
+    role: 'Aviation Photographer',
+    instagram: 'https://instagram.com/ryan_h_chang',
+    email: 'mpr_ryanzhang@163.com'
   }
 ]
