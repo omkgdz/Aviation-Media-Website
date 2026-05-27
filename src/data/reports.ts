@@ -15,6 +15,123 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'zhuhai-2024',
+    title: 'China International Aviation & Aerospace Exhibition 2024',
+    subtitle: 'Zhuhai Airshow 2024 - China\'s Premier Aerospace Exhibition',
+    coverImage: '/images/reports/zhuhai2024/71001j16plaaf.jpg',
+    date: '2024-11-12',
+    location: 'Zhuhai, China',
+    airport: 'ZGSD',
+    authors: ['Runfeng Jiang', 'Boyuan Zhang', 'Yuyang Zhao'],
+    content: `The 15th China International Aviation & Aerospace Exhibition, better known as the Zhuhai Airshow 2024, was held at Zhuhai Jinwan Airport, showcasing the latest in Chinese aviation and aerospace technology. This biennial event is China's largest aerospace exhibition, attracting aviation enthusiasts and industry professionals from around the world.
+
+Zhuhai Airshow 2024 featured an impressive display of military aircraft, commercial jets, and cutting-edge aerospace technology. The People's Liberation Army Air Force (PLAAF) showcased its most advanced fighter aircraft, including the J-20 stealth fighter and J-10C multirole fighter.
+
+The flying demonstrations were a major highlight, with breathtaking aerobatic displays by the PLAAF's demonstration teams. The static display area offered close-up views of numerous aircraft types, from combat jets to transport aircraft and special mission platforms.
+
+Special highlights from Zhuhai Airshow 2024 included:
+- The impressive J-20 stealth fighter in PLAAF markings
+- The dynamic J-10C display with advanced capabilities
+- The ARJ21 regional jet from COMAC
+- Various transport and special mission aircraft
+- Cutting-edge unmanned aerial vehicles
+
+Zhuhai Airshow continues to grow in scale and international importance, providing a unique window into China's rapidly developing aerospace industry.`,
+    gallery: [
+      {
+        id: 'zhuhai-2024-1',
+        url: '/images/reports/zhuhai2024/71001j16plaaf.jpg',
+        thumbnail: '/images/reports/zhuhai2024/71001j16plaaf.jpg',
+        title: 'PLAAF J-16',
+        aircraft: 'Shenyang J-16',
+        registration: '71001',
+        airline: 'People\'s Liberation Army Air Force',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-2',
+        url: '/images/reports/zhuhai2024/74825J10CPLAAF.jpg',
+        thumbnail: '/images/reports/zhuhai2024/74825J10CPLAAF.jpg',
+        title: 'PLAAF J-10C',
+        aircraft: 'Chengdu J-10C',
+        registration: '74825',
+        airline: 'People\'s Liberation Army Air Force',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-3',
+        url: '/images/reports/zhuhai2024/42Z20JPLAN.jpg',
+        thumbnail: '/images/reports/zhuhai2024/42Z20JPLAN.jpg',
+        title: 'PLAAF Z-20',
+        aircraft: 'Harbin Z-20',
+        registration: '42',
+        airline: 'People\'s Liberation Army Air Force',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-4',
+        url: '/images/reports/zhuhai2024/arj21b657ycomacexpress.jpg',
+        thumbnail: '/images/reports/zhuhai2024/arj21b657ycomacexpress.jpg',
+        title: 'COMAC ARJ21',
+        aircraft: 'COMAC ARJ21-700',
+        registration: 'B-657Y',
+        airline: 'Chengdu Airlines',
+        category: 'commercial',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-5',
+        url: '/images/reports/zhuhai2024/t50054sukoidesign.jpg',
+        thumbnail: '/images/reports/zhuhai2024/t50054sukoidesign.jpg',
+        title: 'Sukhoi Design',
+        aircraft: 'Sukhoi Aircraft',
+        registration: 'T50054',
+        airline: 'Sukhoi Design Bureau',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-6',
+        url: '/images/reports/zhuhai2024/t50054sukoidesign(1).jpg',
+        thumbnail: '/images/reports/zhuhai2024/t50054sukoidesign(1).jpg',
+        title: 'Sukhoi Design (View 1)',
+        aircraft: 'Sukhoi Aircraft',
+        registration: 'T50054',
+        airline: 'Sukhoi Design Bureau',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      },
+      {
+        id: 'zhuhai-2024-7',
+        url: '/images/reports/zhuhai2024/t50054sukoidesign(2).jpg',
+        thumbnail: '/images/reports/zhuhai2024/t50054sukoidesign(2).jpg',
+        title: 'Sukhoi Design (View 2)',
+        aircraft: 'Sukhoi Aircraft',
+        registration: 'T50054',
+        airline: 'Sukhoi Design Bureau',
+        category: 'military',
+        date: '2024-11-12',
+        location: 'Zhuhai Jinwan Airport',
+        airport: 'ZGSD'
+      }
+    ]
+  },
+  {
     id: 'riat-2024',
     title: 'Royal International Air Tattoo 2024',
     subtitle: 'RIAT 2024 - The World\'s Largest Military Airshow',
