@@ -59,7 +59,7 @@ export const photos: Photo[] = [
     title: 'COMAC ARJ21',
     aircraft: 'COMAC ARJ21-700',
     registration: 'B-657Y',
-    airline: 'Chengdu Airlines',
+    airline: 'COMAC Express',
     category: 'commercial',
     date: '2024-11-12',
     location: 'Zhuhai Jinwan Airport',
